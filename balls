@@ -1,0 +1,49 @@
+function setup() {
+createCanvas(400, 400);
+fill(255, 255, 0)
+}
+
+//varibles for the first ball
+var ball = 0;
+var rai = 50;
+var ballspeed = 4;
+var ballDirection = ballspeed;
+var ballcolor = 250
+
+//varibles for the second ball
+var ball2 = 10;
+var ballspeed2 = 3.5;
+var ballDirection2 = ballspeed2;
+var ballcolor2 = 200
+function draw() {
+background(220);
+  
+  
+//draw the two balls
+fill(ballcolor)
+ellipse(ball, height / 2, rai)
+fill(ballcolor2)
+ellipse(ball2, 100, 25)
+  
+  
+//update position of the two balls
+ball = ball + ballDirection;
+ball2 = ball2 + ballDirection2;
+  
+  
+//right d
+if (ball >= height) {
+ballDirection = -ballspeed;
+fill(255, 0, 255)
+}
+if (ball2 >= height) {
+ballDirection2 = -ballspeed2;
+fill(255, 0, 255)
+}
+if (ball <= 0) {
+ballDirection = ballspeed
+}
+if (ball2 <= 0) {
+ballDirection2 = ballspeed2;
+}
+}
