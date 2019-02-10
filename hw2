@@ -1,0 +1,39 @@
+function setup() {
+  createCanvas(300, 300);
+}
+
+
+function draw() {
+  background(255,240,240);
+	noStroke();
+	
+var topH = 140;
+var midH = height - 80; //- 80; //320;
+var botH = height - 30;
+var leftV = 80;
+var RV = width - 30;
+	
+	
+	fill(220,0,0); //RED
+	rect(0,leftV, midH, midH); // RED RECT
+	
+	fill(0,130,255); //BLUE 
+	rect(0,0,topH,80); //BLUE RECT
+	
+	fill(255,235,0);// Yellow
+	rect(RV,0,100,80); // Yellow Rect
+	
+	stroke(0);
+	strokeWeight(10);
+	line(0,leftV,height,leftV) //VERT
+	line(midH,0,midH,width) //HORZ
+  line(RV,height,RV,0) //HORZ
+	
+	strokeWeight(15)
+	strokeCap(SQUARE)
+	line(width,midH,RV,midH) //BOT HORZ
+	strokeWeight(16)
+	strokeCap(SQUARE)
+	line(topH,0,topH,leftV) //TOP HORZ
+	
+}
